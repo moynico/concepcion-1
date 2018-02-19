@@ -491,7 +491,7 @@ def run14(verbose=True):
 def run15(verbose=True):
     lm = LayerMapping(
         limiteComunal, limiteComunal_shp, limiteComunal_mapping,
-        transform=False, encoding='utf-8',
+        transform=True, encoding='utf-8', source_srs='32718',
     )
     lm.save(strict=False, verbose=verbose)
     
@@ -519,7 +519,7 @@ def run18(verbose=True):
 def run19(verbose=True):
     lm = LayerMapping(
         Predios, Predios_shp, Predios_mapping,
-        transform=False, encoding='utf-8',
+        transform=True, encoding='utf-8', source_srs='32718',
     )
     lm.save(strict=False, verbose=verbose)
     

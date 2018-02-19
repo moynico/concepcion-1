@@ -37,6 +37,13 @@ from .models import Vialidad
 from .models import viasEstructurantes
 from .models import Zonificacion
 
+from djgeojson.views import GeoJSONLayerView
+
+class SimpleMapLayer(GeoJSONLayerView):
+    # Options
+    precision = 4   # float
+    simplify = 0.5  # generalization
+
 def areasVerdes(request):
     areasVerdes = areaVerde.objects.all()
 #    contenidos = []
